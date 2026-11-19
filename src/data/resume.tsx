@@ -16,7 +16,7 @@ export const DATA = {
   description:
     "IB student at Vilnius Lyceum. Building robotics software, computer vision systems, and applied prototypes.",
   summary:
-    "High school student studying Computer Science, Physics, and Mathematics at Vilnius Lyceum. Most of my engineering focus is on autonomous robotics (FTC), computer vision in OpenCV, and competing in hackathons and data competitions. Outside of writing code and building hardware, I train for triathlons.",
+    "IB Diploma student at Vilnius Lyceum, taking Computer Science and Mathematics at Higher Level alongside Physics and Economics. Most of my engineering work is autonomous robotics and computer vision for FIRST Tech Challenge, plus hackathons and data competitions, one of which turned into Cited. Outside of code and hardware, I race triathlons after ten years of competitive swimming.",
   avatarUrl: "/me.png",
   skills: [
     { name: "Python", icon: Python },
@@ -81,24 +81,24 @@ export const DATA = {
       href: "https://licejus.lt",
       badges: ["FTC Team #24474"],
       location: "Vilnius",
-      title: "Software & Vision Lead",
+      title: "Lead Vision & Autonomous Developer",
       logoUrl: "/robotics-logo.jpeg",
       start: "Jun 2024",
       end: "Present",
       description:
-        "Engineered autonomous robotics software for FIRST Tech Challenge. Built a Python/OpenCV pipeline using 3D perspective geometry to localize game elements and calculate ground coordinates (X, Y) in under 30ms. Served as Winning Alliance Captain and secured the Innovate Award at the Netherlands Qualifier in Bladel.",
+        "Write autonomous driving and computer vision code for our FIRST Tech Challenge robot. Built a geometric OpenCV detector as an alternative to the team's neural network: with a fixed camera and a flat field, every pixel projects straight onto the floor, which cut detection on the Android controller from about 2 s to 200 ms with no training data. Winning Alliance Captain and Innovate Award at the Benelux qualifier; reached the European Championship final.",
     },
     {
       company: "CITED",
-      href: "https://aistis.dev",
+      href: "https://cited.lt",
       badges: ["Hackathon Winner"],
       location: "Vilnius",
-      title: "Co-Founder & Developer",
+      title: "Co-Founder & Lead Developer",
       logoUrl: "/cited.jpeg",
       start: "May 2026",
       end: "Present",
       description:
-        "Engineered an automated pipeline to evaluate web page indexing heuristics and citation rates across generative AI search engines. Spun out of the Make It Real hackathon where we won 1st Place overall.",
+        "Cited shows companies what AI search engines tell their customers about them, and where it gets them wrong. Grew out of our 1st-place project at the Make It Real hackathon; piloted with the biotech firm Nando, with 40 B2B sign-ups and a €2,000 accelerator grant so far.",
     },
   ],
 
@@ -115,13 +115,13 @@ export const DATA = {
 
   projects: [
     {
-      title: "3D Real-Time Computer Vision Pipeline",
+      title: "Geometric Computer Vision Pipeline for FTC",
       href: "",
       dates: "2024 - 2025",
       active: true,
       description:
-        "Real-time vision pipeline running on FTC robots. Calculates real-world coordinates and rotational orientation of game elements from perspective camera streams in under 30ms using contour analysis and 3D projective geometry.",
-      technologies: ["Python", "OpenCV", "Robotics (FTC)", "Linear Algebra"],
+        "Detects game elements with contour analysis and projective geometry instead of a trained model, then computes their position and orientation on the field. Runs in about 200 ms on the robot's Android controller, roughly 10x faster than the stock neural-network detector.",
+      technologies: ["Java", "OpenCV (EasyOpenCV)", "Robotics (FTC)", "Projective Geometry"],
       links: [{type: "", href: "https://github.com/AistisV/FTC-ITD-vision", icon: <Icons.github className="size-3" />,}],
       image: "cv-pipeline.jpeg",
       video: "",
@@ -132,7 +132,7 @@ export const DATA = {
       dates: "May 2026",
       active: true,
       description:
-        "Automated website ingestion audit tool built in 48 hours. Scrapes web architectures, validates semantic structure, and runs automated queries against LLM search tools to measure brand visibility and citation retention.",
+        "Audit tool first built in 48 hours at Make It Real. Crawls a company's website, checks its structure, and queries AI search tools to measure how often they cite the brand and whether what they say matches the company's own pages.",
       technologies: ["Python", "LLM APIs", "Web Scraping", "React"],
       links: [
         {type: "", href: "https://github.com/AistisV/hack-repo", icon: <Icons.github className="size-3" />,}
@@ -146,8 +146,8 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "Replaced linear review schedules with an algorithmic dependency graph. Uses topological sorting to sequence syllabus prerequisites and stores relations in a 3NF normalized SQL database to eliminate redundant cyclic dependencies.",
-      technologies: ["Python", "SQL (PostgreSQL)", "Graph Algorithms", "3NF Normalization"],
+        "IB Computer Science IA: a revision app that models the Physics syllabus as a directed acyclic dependency graph instead of a linear review schedule. Topological sorting sequences topics so prerequisites always come first, and topics, prerequisites and progress are stored in a 3NF-normalised SQLite database.",
+      technologies: ["Python", "SQLite", "Tkinter", "Graph Algorithms", "3NF Normalisation"],
       links: [
         {type: "Source", href: "https://github.com/AistisV/comp-sci-IA.git", icon: <Icons.github className="size-3" />,}],
       image: "/compsci.jpeg",
@@ -155,11 +155,11 @@ export const DATA = {
     },
     {
       title: "Model Rocket Avionics & Telemetry System",
-      href: "https://github.com/AistisV",
+      href: "",
       dates: "2026",
       active: true,
       description:
-        "Designed and fabricated an instrumented model rocket powered by a DIY solid motor. Integrated on-board telemetry logging (barometric pressure, altitude calculation, flight camera) and an automated spring-loaded parachute deployment mechanism.",
+        "Designed and built a model rocket around a custom flight computer: five sensors, live telemetry, an on-board flight camera, and a spring-loaded parachute triggered automatically at apogee. Flown three times.",
       technologies: ["Embedded Systems", "Sensors", "Hardware Prototyping", "Telemetry"],
       links: [
         // {
@@ -179,7 +179,7 @@ export const DATA = {
       dates: "May 2026",
       location: "Vilnius, Lithuania",
       description:
-        "Built and shipped the CITED prototype in 48 hours. Won 1st Place Overall (€3,000) and the Nando Corporate Challenge (€1,000).",
+        "Built the first Cited prototype in 48 hours, competing against 150+ developers. Won 1st Place Overall (€3,000) and the Nando Corporate Challenge (€1,000).",
       image: "/jaunaragiai.jpeg",
       links: [
         {
@@ -190,11 +190,11 @@ export const DATA = {
       ],
     },
     {
-      title: "FIRST Tech Challenge — NL Qualifier Bladel",
+      title: "FIRST Tech Challenge — Benelux Qualifier, Bladel",
       dates: "January 2025",
       location: "Bladel, Netherlands",
       description:
-        "Winning Alliance Captain & Innovate Award. Led robotics tournament strategy, autonomous vision targeting, and mechanical integration across eliminations.",
+        "1st place as Winning Alliance Captain, plus the Innovate Award. Wrote the robot's autonomous and vision code.",
       image: "/robotics-logo.jpeg",
       links: [],
     },
@@ -203,7 +203,7 @@ export const DATA = {
       dates: "June 2025",
       location: "Luxembourg / Remote",
       description:
-        "1st Place Winner. Multi-stage European data analysis competition: analyzed EU datasets, authored a quantitative research paper, and produced explanatory video media for an international jury.",
+        "1st place in the European final (~27,000 students from 21 countries). Led a team of three analysing EU demographic and economic data in Python to test whether older generations adopt Gen Z habits; submitted a research paper and video to an international jury.",
       image: "/eurostat.png",
       links: [
         {
@@ -233,7 +233,7 @@ export const DATA = {
       dates: "March 2026",
       location: "Vilnius, Lithuania",
       description:
-        "1st Place Nationwide. Evaluated on quantitative economic modeling, macro-financial analysis, and market systems design.",
+        "1st place nationally in financial mathematics, out of 1,700+ competitors.",
       image: "/vilniustech.jpg",
       links: [
         {
@@ -244,11 +244,11 @@ export const DATA = {
       ],
     },
     {
-      title: '"Vilniaus vizija 2050" AI Systems Competition',
+      title: '"Vilnius 2050" City Vision Competition',
       dates: "March 2026",
       location: "Vilnius, Lithuania",
       description:
-        "1st Place Overall (€4,000). Designed an autonomous transit and infrastructure framework; produced presentation video entirely with generative AI tools.",
+        "1st Place Overall (€4,000) out of 50+ entries, with teammate Paulius Sargūnas. Organised by EIKA Group with Vilnius City Municipality; our video pitched edtech and smart-city ideas for Vilnius and was produced entirely with generative AI tools.",
       image: "/vilnius_logo.jpeg",
       links: [
                 {
