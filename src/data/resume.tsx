@@ -133,7 +133,7 @@ export const DATA = {
       active: true,
       description:
         "Audit tool first built in 48 hours at Make It Real. Crawls a company's website, checks its structure, and queries AI search tools to measure how often they cite the brand and whether what they say matches the company's own pages.",
-      technologies: ["Python", "LLM APIs", "Web Scraping", "React"],
+      technologies: ["JavaScript", "React", "LLM APIs", "Supabase (PostgreSQL)"],
       links: [
         {type: "", href: "https://github.com/AistisV/hack-repo", icon: <Icons.github className="size-3" />,}
       ],
