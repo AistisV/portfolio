@@ -76,6 +76,16 @@ export default function WorkSection() {
           </AccordionTrigger>
           <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
             {work.description}
+            {work.href && (
+              <a
+                href={work.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 block w-fit underline underline-offset-4 hover:text-foreground"
+              >
+                {work.href.replace(/^https?:\/\//, "")} ↗
+              </a>
+            )}
           </AccordionContent>
         </AccordionItem>
       ))}
